@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Abby Damerow CSS Assesment</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        
+        <article class="widget">
+          <div class="top">
+            <h4>Contacts</h4>
+          </div>
+          <div class="contact-list">
+            <div class="contact">
+              <div class="name">
+                <p><span class="online">• </span>Christian</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">christian@yahoo.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+            <div class="contact full">
+              <div class="name">
+                <p><span class="online">• </span>Rich</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">rich@tripod.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="name">
+                <p><span class="online">• </span>Scott</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">scott@mailinator.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="name">
+                <p><span class="online">• </span>Danny</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">danny@hotmail.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="name">
+                <p><span class="offline">• </span>Taka</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">taka@myspace.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="name">
+                <p><span class="busy">• </span>Tim</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">tim@netscape.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="name">
+                <p><span class="online">• </span>Patrick</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">patrick@live.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="name">
+                <p><span class="busy">• </span>Jacques</p>
+              </div><!--
+           --><div class="info">
+                <p class="email">jacques@aol.com</p>
+                <p class="phone">323-555-1234</p>
+                <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <select id="mySelect" onchange="myFunction()">
+              <option value="email">Email
+              <option value="phone">Phone number
+            </select>
+          </div>
+        </article>
+        
+    </body>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("mySelect").value;
+
+          if(x.includes("phone"))
+            {
+              document.getElementById("test").innerHTML = "You selected: " + x;
+              $(".info").addClass("show-phone");
+            }
+          else
+            {
+              $(".info").removeClass("show-phone");
+            }
+        }
+
+        $(".contact").click(function(){
+            $(this).toggleClass("full");
+        });
+    </script>
+</html>
