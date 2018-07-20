@@ -9,12 +9,10 @@
     </head>
     <body>
         
-        <article class="widget">
           <div class="top">
             <h4>Contacts</h4>
           </div>
-          <div class="contact-list">
-            <div class="contact">
+          <div class="contact">
               <div class="name">
                 <p><span class="online">• </span>Christian</p>
               </div><!--
@@ -24,7 +22,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact">
+          <div class="contact full">
               <div class="name">
                 <p><span class="online">• </span>Rich</p>
               </div><!--
@@ -34,7 +32,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact">
+          <div class="contact">
               <div class="name">
                 <p><span class="online">• </span>Scott</p>
               </div><!--
@@ -44,7 +42,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact">
+          <div class="contact">
               <div class="name">
                 <p><span class="online">• </span>Danny</p>
               </div><!--
@@ -54,7 +52,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact">
+          <div class="contact">
               <div class="name">
                 <p><span class="offline">• </span>Taka</p>
               </div><!--
@@ -64,7 +62,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact">
+          <div class="contact">
               <div class="name">
                 <p><span class="busy">• </span>Tim</p>
               </div><!--
@@ -74,7 +72,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact">
+          <div class="contact">
               <div class="name">
                 <p><span class="online">• </span>Patrick</p>
               </div><!--
@@ -84,7 +82,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact">
+          <div class="contact">
               <div class="name">
                 <p><span class="busy">• </span>Jacques</p>
               </div><!--
@@ -94,14 +92,12 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-          </div>
           <div class="bottom">
             <select id="mySelect" onchange="myFunction()">
               <option value="email">Email
               <option value="phone">Phone number
             </select>
           </div>
-        </article>
         
     </body>
     
@@ -112,7 +108,6 @@
 
           if(x.includes("phone"))
             {
-              document.getElementById("test").innerHTML = "You selected: " + x;
               $(".info").addClass("show-phone");
             }
           else
@@ -121,8 +116,9 @@
             }
         }
 
-        $(".contact-list .contact").click(function(){
+        $(".contact").click(function(){
             $(this).toggleClass("full");
+            $(this).removeClass("show-phone");
         });
     </script>
 </html>
