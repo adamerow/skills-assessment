@@ -24,7 +24,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-            <div class="contact full">
+            <div class="contact">
               <div class="name">
                 <p><span class="online">• </span>Rich</p>
               </div><!--
@@ -104,6 +104,8 @@
         </article>
         
     </body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         function myFunction() {
           var x = document.getElementById("mySelect").value;
@@ -119,7 +121,7 @@
             }
         }
 
-        $(".contact").click(function(){
+        $(".contact-list .contact").click(function(){
             $(this).toggleClass("full");
         });
     </script>
