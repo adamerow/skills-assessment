@@ -12,6 +12,7 @@
           <div class="top">
             <h4>Contacts</h4>
           </div>
+          <div class="overlay"></div>
           <div class="contact">
               <div class="name">
                 <p><span class="online">• </span>Christian</p>
@@ -22,7 +23,7 @@
                 <p class="address">6539 Wilton Ave.<br>Culver City CA 90234</p>
               </div>
             </div>
-          <div class="contact full">
+          <div class="contact">
               <div class="name">
                 <p><span class="online">• </span>Rich</p>
               </div><!--
@@ -104,8 +105,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         function myFunction() {
-          var x = document.getElementById("mySelect").value;
-
+          var x = $("#mySelect").value;
           if(x.includes("phone"))
             {
               $(".info").addClass("show-phone");
@@ -115,10 +115,10 @@
               $(".info").removeClass("show-phone");
             }
         }
-
         $(".contact").click(function(){
             $(this).toggleClass("full");
             $(this).removeClass("show-phone");
+            $(".overlay").toggleClass("show-overlay");
         });
     </script>
 </html>
